@@ -6,7 +6,8 @@
     "module": "es6",
     "target": "es5",
     "jsx": "react",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "lib": ["DOM", "ES5", "ScriptHost", "ES2015"]
   },
   "files": [
     "./src/index.tsx"
