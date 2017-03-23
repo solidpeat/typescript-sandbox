@@ -1,8 +1,12 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import Hello from "./components/Hello";
+import { Provider } from 'react-redux';
+import store from "./store";
+import Counter from "./counter/Root";
 
 render(
-  <Hello content="hello world"/>,
+  <Provider store={store}>
+    <Counter />
+  </Provider>,
   document.getElementById('app'),
 );
