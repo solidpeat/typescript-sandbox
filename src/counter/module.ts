@@ -15,7 +15,7 @@ interface MyAction {
   amount?: number;
 };
 
-class ActionTypes {
+export class ActionTypes {
   static INCREMENT = 'counter/increment';
   static DECREMENT = 'counter/decrement';
   static FETCH_REQUEST_START = 'counter/fetch_request_start';

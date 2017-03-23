@@ -17,3 +17,9 @@ Promiseを使うため（？）にtsconfigのlibにES2015を追加（他のはta
 IResponseが見つからんっていうからResponseにした
 
 fetchのcredentialsをincludeにするとAPI側のAccess-Control-Allow-Originに*が使えないみたいなのでとりあえずコメントアウト
+
+module.tsのActionTypesをexportするのはテストのためだけ？
+
+Counter.spec.tsxのテストするのに謎のエラーが出てたのを
+https://github.com/airbnb/enzyme/issues/503
+を参考にしたけどぜんぜんわかってない
