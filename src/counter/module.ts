@@ -48,7 +48,7 @@ export class ActionDispatcher {
     this.dispatch({type: ActionTypes.FETCH_REQUEST_START});
 
     try {
-      const response: Response = await fetch('//localhost:3000/api/count', {
+      const response: Response = await fetch('/api/count', {
         method: 'GET',
         headers: myHeaders,
         // credentials: 'include',

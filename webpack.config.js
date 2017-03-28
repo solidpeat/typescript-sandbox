@@ -28,5 +28,10 @@ module.exports = {
   devtool: 'inline-source-map',
   resolve: {
     extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
+  },
+  devServer: {
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
   }
 }

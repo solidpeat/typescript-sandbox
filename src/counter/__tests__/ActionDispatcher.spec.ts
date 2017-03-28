@@ -17,7 +17,7 @@ describe('ActionDispatcher', () => {
   });
 
   it('fetchAmount success', async (done) => {
-    fetchMock.get('//localhost:3000/api/count', { body: { amount: 100 }, status: 200 });
+    fetchMock.get('/api/count', { body: { amount: 100 }, status: 200 });
 
     const spy: any = { dispatch: null };
     spyOn(spy, 'dispatch');
