@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { CounterState, ActionDispatcher } from './module';
 
-interface Props {
+// containerで使用するためにexport
+export interface Props {
   value: CounterState;
   actions: ActionDispatcher;
 }

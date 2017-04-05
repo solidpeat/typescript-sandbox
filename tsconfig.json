@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
+    "experimentalDecorators": true,
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
@@ -11,6 +12,7 @@
   },
   "files": [
     "./src/index.tsx",
-    "./allowAny.d.ts"
+    "./allowAny.d.ts",
+    "./react-redux.d.ts"
   ]
 }
