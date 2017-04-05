@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Dispatch } from 'redux';
+import { Dispatch, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { ActionDispatcher } from './module';
+import * as CounterActions from './actions';
 import Counter from './Counter';
 
 export default connect(
   (store: any) => ({value: store.counter}),
-  (dispatch: Dispatch<any>) => ({actions: new ActionDispatcher(dispatch)}),
+  (dispatch: Dispatch<any>) => ({actions: bindActionCreators(CounterActions as any, dispatch)}),
 )(Counter);

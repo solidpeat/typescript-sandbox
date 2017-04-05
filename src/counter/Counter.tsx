@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { CounterState, ActionDispatcher } from './module';
+import { CounterState } from './module';
+import * as CounterActions from './actions';
 
 interface Props {
   value: CounterState;
-  actions: ActionDispatcher;
+  actions: typeof CounterActions;
 }
 
 export default (props: Props) => {
@@ -15,7 +16,6 @@ export default (props: Props) => {
       <p>score: {props.value.num}</p>
       <button onClick={() => props.actions.increment(3)}>Increment 3</button>
       <button onClick={() => props.actions.decrement(2)}>Decrement 2</button>
-      <button onClick={() => props.actions.fetchAmount()}>Async bonus 100</button>
     </div>
   );
 };
