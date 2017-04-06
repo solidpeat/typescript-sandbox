@@ -6,7 +6,6 @@ const marks = Map<boolean, string>([[true, '■'], [false, '□']]);
 const initialState: TodoState = { todos: List.of<Todo>(), marks: marks };
 
 export default function todoReduce(state: TodoState = initialState, action: MyAction): TodoState {
-
   function changeStatus(state: TodoState, action: MyAction): TodoState {
     const newTodos = state.todos.map(v => {
       if (v.id === action.id) return new Todo(v.id, v.text, !v.isComplete);

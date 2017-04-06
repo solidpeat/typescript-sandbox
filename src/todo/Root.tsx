@@ -8,8 +8,8 @@ import TodoList, { Props as TodoProps } from './TodoList';
 interface Props extends TodoProps, RouteComponentProps<void> {}
 
 @connect(
-  (state: any) => { return { state: state.todoReduce } },
-  (dispatch: Dispatch<any>) => { return { actions: new DispatchActions(dispatch) } }
+  (state: any) => ({ state: state.todoReduce }),
+  (dispatch: Dispatch<any>) => ({ actions: new DispatchActions(dispatch) }),
 )
 export default class TodoRoot extends React.Component<Props, void> {
   render() {

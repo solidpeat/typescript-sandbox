@@ -1,6 +1,11 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { List } from 'immutable';
-import { MyAction, ActionTypes, TodoInterface, Todo } from './Models';
+import {
+  MyAction,
+  ActionTypes,
+  // TodoInterface,
+  Todo
+} from './Models';
 
 export function changeStatusAction(id: number): MyAction {
   return { type: ActionTypes.CHANGE_TODO_STATUS, id: id }
@@ -16,15 +21,15 @@ export function deleteAction(id: number): MyAction {
 
 export function fetchAllAction() {
   return (dispatch: (action: MyAction) => any) => {
-    const failCB = (ex:Error) => {
+    const failCB = (ex: Error) => {
       console.error(ex);
       dispatch({ type: ActionTypes.FETCH_FAIL })
     };
-    // const successCB = (json:Axios.AxiosXHR<TodoInterface[]>) => {
-    const successCB = (json: any) => {
+    // const successCB = (json: Axios.AxiosXHR<TodoInterface[]>) => {
+    const successCB = (json: AxiosResponse) => {
       const todos_arr: Todo[] = json.data.map((v: any) => new Todo(v.id, v.text, v.isComplete));
       const todos: List<Todo> = List.of(...todos_arr);
-      const action:MyAction = { type: ActionTypes.FETCH_ALL, todos: todos };
+      const action: MyAction = { type: ActionTypes.FETCH_ALL, todos: todos };
       dispatch(action);
     };
     dispatch({ type: ActionTypes.FETCH_REQUEST });

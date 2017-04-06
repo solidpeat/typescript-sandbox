@@ -1,12 +1,12 @@
 import { List, Map } from 'immutable';
 import {
-  deleteAction,
-  addAction,
-  fetchAllAction,
   changeStatusAction,
+  addAction,
+  deleteAction,
+  fetchAllAction,
 } from './ActionCreators';
 
-export interface TodoInterface {
+interface TodoInterface {
   id: number;
   text: string;
   isComplete: boolean;
@@ -29,8 +29,10 @@ export interface MyAction {
   todos?: List<Todo>;
 }
 
+// counterのActionDispatcherと同じ
 export class DispatchActions {
   private dispatch: (action: any) => any;
+
   constructor(dispatch: (action: any) => any) {
     this.dispatch = dispatch;
   }
@@ -52,7 +54,7 @@ export class DispatchActions {
   }
 }
 
-export class ActionTypes{
+export class ActionTypes {
   static CHANGE_TODO_STATUS = 'CHANGE_TODO_STATUS';
   static ADD_TODO = 'TODO_ADD';
   static DELETE_TODO = 'TODO_DELETE';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { DispatchActions } from './Models';
 
-export interface Props {
+interface Props {
   actions: DispatchActions;
 }
 
@@ -13,7 +13,7 @@ export default class Footer extends React.Component<Props, State> {
 
   state: State = { text: '' };
   public keyPress(event: any): void {
-    if(event.charCode == 13) {
+    if (event.charCode == 13) {
       this.createNewOne.bind(this)()
     }
   }

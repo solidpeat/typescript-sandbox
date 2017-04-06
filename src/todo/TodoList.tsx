@@ -9,7 +9,7 @@ export interface Props {
 }
 
 export default class TodoList extends React.Component<Props, {}> {
-
+  // 最初のAPI呼び出し
   componentDidMount() {
     // if todos are already taken, don't action anymore.
     if (!this.props.state.todos.isEmpty()) return;
@@ -17,8 +17,13 @@ export default class TodoList extends React.Component<Props, {}> {
   }
 
   render() {
-    const todoItems = this.props.state.todos.map((item:Todo) => (
-      <TodoItem key={item.id} item={item} marks={this.props.state.marks} actions={this.props.actions} />
+    const todoItems = this.props.state.todos.map((item: Todo) => (
+      <TodoItem
+        key={item.id}
+        item={item}
+        marks={this.props.state.marks}
+        actions={this.props.actions}
+      />
     ));
     return (
       <div>
