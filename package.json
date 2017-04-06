@@ -46,6 +46,7 @@
     "@types/react-router-dom": "^4.0.3",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
+    "@types/rx": "^4.1.1",
     "axios": "^0.16.0",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
@@ -54,6 +55,7 @@
     "react-redux": "^5.0.3",
     "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "rx": "^4.1.0"
   }
 }

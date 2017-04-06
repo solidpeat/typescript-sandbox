@@ -4,7 +4,7 @@ import { Todo, DispatchActions } from './Models';
 
 export interface Props {
   item: Todo;
-  key?: number; // I think this prop is unnecessary, but unless it an error occurs in tsc.
+  // key?: number; // I think this prop is unnecessary, but unless it an error occurs in tsc.
   actions: DispatchActions;
   marks: Map<boolean, string>;
 }

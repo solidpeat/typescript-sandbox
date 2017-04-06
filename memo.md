@@ -23,3 +23,18 @@ module.tsのActionTypesをexportするのはテストのためだけ？
 Counter.spec.tsxのテストするのに謎のエラーが出てたのを
 https://github.com/airbnb/enzyme/issues/503
 を参考にしたけどぜんぜんわかってない
+
+onChangeとかでReactのFormEventとかうけとると、targetがEventTargetになるけど、EventTargetはHTMLElementとは限らないのでvalueがとれない
+http://qiita.com/wamei/items/43753e03821964719f31
+
+React.Component<Props, void>
+React.Component<Props, udnefined>
+React.Component<Props, null>
+どれがいいんだろう？
+react-routerの型定義ではvoidだからvoidにしとくか
+
+
+クラスのメンバのアクセス修飾子を省略するとpublic
+
+typescriptのgetter,setterがあるので使って見たい
+export type ってなんだ？
