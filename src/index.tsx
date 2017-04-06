@@ -11,6 +11,7 @@ import store from './store';
 import Root from './Root';
 import NotFound from './NotFound';
 import Counter from './counter/Root';
+import Todo from './todo/Root';
 
 // Routerの直下は単一じゃないとダメ
 render(
@@ -20,11 +21,13 @@ render(
         <h1>React Redux sample</h1>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/counter'>Counter</Link></li>
+        <li><Link to='/todo'>Todo</Link></li>
         <li><Link to='/random_url'>Notfound</Link></li>
         <hr/>
         <Switch>
           <Route exact path='/' component={Root} />
           <Route path='/counter' component={Counter} />
+          <Route path='/todo' component={Todo} />
           <Route component={NotFound}/>
         </Switch>
       </div>
